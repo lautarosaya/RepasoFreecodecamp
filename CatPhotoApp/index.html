@@ -43,9 +43,32 @@
         <section>
             <h2>Cat Form</h2>
             <form action="https://freecatphotoapp.com/submit-cat-photo">
-                <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                <!-- El fieldset hace una cajita al rededor del input -->
+                <!-- RADIO BUTTON -->
+                <fieldset>
+                    <!-- Legend pone un texto de referencia en la caja del fieldset -->
+                    <legend>Is your cat an indoor or outdoor cat?</legend>
+                    <!-- El checked hay que agregarlo al principio -->
+                    <label><input checked type="radio" id="indoor" name="indoor-outdoor" value="indoor" > Indoor</label>
+                    <label><input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+                    <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                </fieldset>
+                <!-- CHECKBOX -->
+                <fieldset>
+                   <legend>What's your cat's personality?</legend>
+                   <!-- Otra forma de relacionar la palabra con el checkbox es con un for, tiene que tener el mismo nombre que el id -->
+                   <input checked type="checkbox" name="personality" id="loving" value="loving"> <label for="loving">Loving</label>
+
+                   <input type="checkbox" name="personality" id="lazy" value="lazy"><label for="lazy">Lazy</label>
+
+                    <input type="checkbox" name="personality" id="energetic" value="energetic"><label for="energetic">Energetic</label>
+                </fieldset>
             </form>
         </section>
     </main>
+
+    <footer>
+        <p>No Copyright - <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp.org</a></p>
+    </footer>
 </body>
 </html>
